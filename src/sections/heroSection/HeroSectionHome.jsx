@@ -25,7 +25,7 @@ const HeroSectionHome = () => {
 
         {/* Heading */}
         <h1 className="text-white text-4xl md:text-6xl font-semibold leading-tight">
-          Premium Car Rental <br /> in Los Angeles
+          Premium Car Rental <br /> in Duabi
         </h1>
 
         {/* Paragraph */}
