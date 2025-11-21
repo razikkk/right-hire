@@ -6,13 +6,13 @@ import FeaturedCategories from '../sections/FeaturedCategories/FeaturedCategorie
 import WhyChooseUsSection from '../sections/WhyChooseUs/WhyChooseUsSection'
 import CtaSection from '../sections/CTA/CtaSection'
 import Footer from '../sections/FooterSection/Footer'
-import HeroSection from '../sections/heroSection/HeroSection'
+import HeroSectionHome from '../sections/heroSection/HeroSectionHome'
 
 const Home = () => {
   return (
     <div>
         <Navbar/>
-        <HeroSection/>
+        <HeroSectionHome/>
         <AboutSection/>
         <FeaturedCategories/>
         <WhyChooseUsSection/>

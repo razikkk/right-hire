@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
 
-const HeroSection = () => {
+const HeroSectionHome = () => {
   return (
     <section className="w-full h-[100vh] relative">
       {/* Background Image */}
@@ -43,4 +43,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSectionHome;
