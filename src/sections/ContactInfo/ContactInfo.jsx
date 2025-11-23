@@ -28,7 +28,7 @@ const ContactInfo = () => {
         <div>
           <h3 className="text-xl text-white font-medium mb-2">Address</h3>
           <p className="text-gray-400">
-            123 Main Street, Kochi, Kerala, 682001
+            Dubai,UAE
           </p>
         </div>
 
@@ -36,7 +36,9 @@ const ContactInfo = () => {
         <div>
           <h3 className="text-xl text-white font-medium mb-2">Phone</h3>
           <p className="text-gray-400">
-            +91 98765 43210
+            <a href="tel:+971552599760" className="hover:underline">
+          +971 55 259 9760
+          </a>
           </p>
         </div>
 
@@ -44,7 +46,9 @@ const ContactInfo = () => {
         <div>
           <h3 className="text-xl text-white font-medium mb-2">Email</h3>
           <p className="text-gray-400">
-            support@righthire.com
+            <a href="mailto:accounts@righthire.ae" className="hover:underline">
+          accounts@righthire.ae
+          </a>
           </p>
         </div>
 

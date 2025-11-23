@@ -19,12 +19,13 @@ const ContactForm = () => {
   {/* Quick Enquiry Section */}
   <div className="mt-4">
     <p className="text-white font-medium mb-3">Have a quick enquiry?</p>
-
+    <a href="https://wa.me/971552599760" target="_blank" rel="noopener noreferrer">
     <button className="flex items-center gap-2 bg-white text-black font-light py-3 px-5 rounded-full hover:opacity-90 transition">
     <FaWhatsapp className="h-5 w-5"/>
 
       WhatsApp
     </button>
+    </a>
   </div>
 </div>
 

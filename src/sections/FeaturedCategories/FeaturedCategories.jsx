@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const categories = [
   { name: "SUV", image: "/suv.jpg" },
@@ -23,9 +24,11 @@ const FeaturedCategories = () => {
       </p>
 
       {/* Button */}
-      <button className="mt-6 bg-white text-black px-7 py-3 rounded-full text-lg font-light hover:bg-gray-200 transition">
+      <Link to='/vehicles'>
+      <button className="mt-6 bg-white text-black px-7 py-3 rounded-full text-lg font-light hover:bg-gray-200 transition cursor-pointer">
         See All
       </button>
+      </Link>
 
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 w-full max-w-5xl">

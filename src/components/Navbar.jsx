@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="w-full absolute top-0 left-0 z-50">
-    <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="max-w-7xl mx-auto px-6 py-0 flex items-center justify-between">
 
       {/* LEFT - LOGO */}
       <div className="flex items-center">
         <img
           src="/logo.png"
           alt="Logo"
-          className="h-26 w-auto"
+          className="h-36 w-auto"
         />
       </div>
 

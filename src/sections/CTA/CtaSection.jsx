@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CtaSection = () => {
   return (
@@ -33,10 +34,11 @@ const CtaSection = () => {
         Schedule a visit and explore our premium fleet in person — 
         experience quality and service like never before.
       </p>
-
-      <button className="mt-6 bg-white text-black px-8 py-3 rounded-full font-light hover:bg-gray-200 transition">
+        <Link to='/contact'>
+      <button className="mt-6 bg-white text-black px-8 py-3 rounded-full font-light hover:bg-gray-200 transition cursor-pointer">
         Book Now
       </button>
+      </Link>
     </div>
 
     {/* FULL-WIDTH IMAGE — NO PADDING AROUND THIS */}

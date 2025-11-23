@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HeroSectionHome = () => {
   return (
@@ -30,13 +31,15 @@ const HeroSectionHome = () => {
 
         {/* Paragraph */}
         <p className="text-gray-200 text-small max-w-md">
-          Experience unmatched comfort, style, and service — wherever the road takes you.
+          Experience unmatched comfort, style, and service wherever the road takes you.
         </p>
 
         {/* Button */}
+        <Link to='/vehicles'>
         <button className="bg-white text-black px-8 py-3 rounded-full text-small font-light hover:bg-gray-200 transition">
           Choose your car
         </button>
+        </Link>
 
       </div>
     </section>
