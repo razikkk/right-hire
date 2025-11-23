@@ -37,12 +37,12 @@ const VehicleDetails = () => {
 
       {/* Price */}
       <p className="text-xl text-center text-gray-300 mb-6">
-        $265,000 <span className="text-gray-400 text-sm">(per day)</span>
+        265 AED <span className="text-gray-400 text-sm">(per day)</span>
       </p>
 
       {/* Contact Button */}
       <div className="flex justify-center mb-12">
-        <button className="bg-white text-black px-8 py-3 rounded-full text-lg font-light hover:bg-black hover:text-white transition">
+        <button className="bg-white text-black px-8 py-3 rounded-full text-lg font-light transition">
           Contact
         </button>
       </div>
