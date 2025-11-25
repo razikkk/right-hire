@@ -24,7 +24,7 @@ const FeaturedCategories = () => {
       </p>
 
       {/* Button */}
-      <Link to='/vehicles'>
+      <Link to='/'>
       <button className="mt-6 bg-white text-black px-7 py-3 rounded-full text-lg font-light hover:bg-gray-200 transition cursor-pointer">
         See All
       </button>

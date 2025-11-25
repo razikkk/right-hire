@@ -35,7 +35,7 @@ const HeroSectionHome = () => {
         </p>
 
         {/* Button */}
-        <Link to='/vehicles'>
+        <Link to='/'>
         <button className="bg-white text-black px-8 py-3 rounded-full text-small font-light hover:bg-gray-200 transition">
           Choose your car
         </button>

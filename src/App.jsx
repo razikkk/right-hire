@@ -8,6 +8,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Vehicles from './pages/Vehicles'
 import VehicleDetails from './pages/VehicleDetails'
+import WhatsappIcon from './components/WhatsappIcon'
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
 
 
     </Routes>
+    <div className="fixed bottom-8 right-8 z-50">
+        <WhatsappIcon onClick={() => window.open("https://wa.me/971552599760")} />
+      </div>
     </>
   )
 }

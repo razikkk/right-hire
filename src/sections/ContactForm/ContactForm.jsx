@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const ContactForm = () => {
+    const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const whatsappNumber = "+971552599760"; // number without spaces or "+" in wa.me link
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const text = `Hello, my name is ${name}. Email: ${email}, Phone: ${phone}. Message: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank"); // opens WhatsApp in a new tab or app
+  };
+
   return (
     <section className="w-full py-24 px-14 flex flex-col md:flex-row justify-between gap-12">
 
@@ -31,57 +45,67 @@ const ContactForm = () => {
 
 
       {/* RIGHT SIDE FORM */}
-      <form className="flex-1 flex flex-col gap-6">
+     <form className="flex-1 flex flex-col gap-6" onSubmit={handleSubmit}>
+      {/* Name */}
+      <div className="flex flex-col gap-1">
+        <label className="text-white text-sm">Your Name</label>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
+          required
+        />
+      </div>
 
-  {/* Name */}
-  <div className="flex flex-col gap-1">
-    <label className="text-white text-sm">Your Name</label>
-    <input
-      type="text"
-      placeholder="Name"
-      className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
-    />
-  </div>
+      {/* Email */}
+      <div className="flex flex-col gap-1">
+        <label className="text-white text-sm">Email</label>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
+          required
+        />
+      </div>
 
-  {/* Email */}
-  <div className="flex flex-col gap-1">
-    <label className="text-white text-sm">Email</label>
-    <input
-      type="email"
-      placeholder="Email"
-      className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
-    />
-  </div>
+      {/* Phone */}
+      <div className="flex flex-col gap-1">
+        <label className="text-white text-sm">Phone</label>
+        <input
+          type="text"
+          placeholder="Phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
+          required
+        />
+      </div>
 
-  {/* Phone */}
-  <div className="flex flex-col gap-1">
-    <label className="text-white text-sm">Phone</label>
-    <input
-      type="text"
-      placeholder="Phone"
-      className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
-    />
-  </div>
+      {/* Message */}
+      <div className="flex flex-col gap-1">
+        <label className="text-white text-sm">Message</label>
+        <textarea
+          placeholder="Message"
+          rows={5}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
+          required
+        />
+      </div>
 
-  {/* Message */}
-  <div className="flex flex-col gap-1">
-    <label className="text-white text-sm">Message</label>
-    <textarea
-      placeholder="Message"
-      rows={5}
-      className="w-full bg-[#1a1a1a] text-white placeholder-white px-4 py-3 rounded-xl outline-none"
-    />
-  </div>
-
-  {/* Button */}
-  <button
-    type="submit"
-    className="mt-2 bg-white text-black font-medium py-3 rounded-xl hover:opacity-90 transition"
-  >
-    Send Message
-  </button>
-</form>
-
+      {/* Button */}
+      <button
+        type="submit"
+        className="mt-2 bg-white text-black font-medium py-3 rounded-xl hover:opacity-90 transition"
+      >
+        Send Message
+      </button>
+    </form>
 
     </section>
   );
