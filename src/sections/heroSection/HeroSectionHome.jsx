@@ -23,12 +23,12 @@ const HeroSectionHome = () => {
   <div className="absolute bottom-20 left-10 md:left-20 flex flex-col items-start gap-4 max-w-xl">
 
     {/* Tag */}
-    <FadeInView delay={0.2}>
+    {/* <FadeInView delay={0.2}>
       <div className="flex items-center gap-3 bg-white text-black rounded-full px-5 py-2 shadow-lg">
         <FaRegStar className="text-small" />
         <span className="font-light">Chosen by 250+ clients</span>
       </div>
-    </FadeInView>
+    </FadeInView> */}
 
     {/* Heading */}
     <FadeInView delay={0.5}>
