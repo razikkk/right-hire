@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { FaBars, FaInstagram, FaLinkedin, FaTimes, FaYoutube } from 'react-icons/fa'
+import { BiLogoGmail } from 'react-icons/bi';
+import { FaBars, FaInstagram, FaLinkedin, FaTimes, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -27,8 +28,16 @@ const Navbar = () => {
         {/* RIGHT - SOCIAL ICONS + BUTTON (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
           <FaInstagram className="text-white text-xl cursor-pointer hover:opacity-80" />
-          <FaLinkedin className="text-white text-xl cursor-pointer hover:opacity-80" />
-          <FaYoutube className="text-white text-xl cursor-pointer hover:opacity-80" />
+          <a
+  href="https://wa.me/971552599760"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaWhatsapp className="text-white text-xl cursor-pointer hover:opacity-80" />
+</a>
+<a href="mailto:accounts@righthire.ae">
+  <BiLogoGmail className="text-white text-xl cursor-pointer hover:opacity-80" />
+</a>
           <Link to="/contact">
             <button className="text-white border border-white rounded-full px-6 py-2 hover:bg-white hover:text-black transition">
               Contact
