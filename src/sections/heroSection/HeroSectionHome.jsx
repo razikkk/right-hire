@@ -33,7 +33,7 @@ const HeroSectionHome = () => {
     {/* Heading */}
     <FadeInView delay={0.5}>
       <h1 className="text-white text-4xl md:text-6xl font-semibold leading-tight">
-        Premium Car Rental <br /> in Duabi
+        Premium Car Rental <br /> in Dubai
       </h1>
     </FadeInView>
 
