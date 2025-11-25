@@ -1,4 +1,5 @@
 import React from "react";
+import FadeInView from "../../components/FadeInView";
 
 const WhyChooseUsSection = () => {
   const cards = [
@@ -36,54 +37,60 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <div className="w-full py-20 px-4 text-center">
-      {/* Heading */}
-      <h1 className="text-white text-4xl md:text-5xl font-medium">
-        Why Choose RightHire
-      </h1>
+<div className="w-full py-20 px-4 text-center">
+  {/* Heading */}
+  <FadeInView delay={0.2}>
+    <h1 className="text-white text-4xl md:text-5xl font-medium">
+      Why Choose RightHire
+    </h1>
+  </FadeInView>
 
-      {/* Paragraph */}
-      <p className="text-gray-400 text-md max-w-xl mx-auto mt-4">
-        Experience a seamless car-buying process built 
-        on transparency, flexibility, and trust.
-      </p>
+  {/* Paragraph */}
+  <FadeInView delay={0.5}>
+    <p className="text-gray-400 text-md max-w-xl mx-auto mt-4">
+      Experience a seamless car-buying process built 
+      on transparency, flexibility, and trust.
+    </p>
+  </FadeInView>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 max-w-5xl mx-auto">
-        {cards.map((card, index) => (
+  {/* Cards */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 max-w-5xl mx-auto">
+    {cards.map((card, index) => (
+      <FadeInView key={index} delay={0.8 + index * 0.2}>
         <div
-        key={index}
-        className={`relative overflow-hidden rounded-3xl border-4 border-white/80 shadow-[0_0_20px_#ffffff30] aspect-square
-          ${index === 4 ? "sm:translate-x-70" : ""}
-        `}
-      >
-        {/* Image */}
-        <img
-          src={card.image}
-          alt={card.title}
-          className="w-full h-full object-cover"
-        />
-      
-        {/* Fade Overlay */}
-        <div
-          className={`absolute w-full px-5 py-6
-            ${
-              card.fade === "top"
-                ? "top-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"
-                : "bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-            }`}
+          className={`relative overflow-hidden rounded-3xl border-4 border-white/80 shadow-[0_0_20px_#ffffff30] aspect-square
+            ${index === 4 ? "sm:translate-x-70" : ""}
+          `}
         >
-          <h3 className="text-white text-xl font-semibold text-left">
-            {card.title}
-          </h3>
-          <p className="text-gray-300 text-sm text-left">
-            {card.text}
-          </p>
+          {/* Image */}
+          <img
+            src={card.image}
+            alt={card.title}
+            className="w-full h-full object-cover"
+          />
+
+          {/* Fade Overlay */}
+          <div
+            className={`absolute w-full px-5 py-6
+              ${
+                card.fade === "top"
+                  ? "top-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+                  : "bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+              }`}
+          >
+            <h3 className="text-white text-xl font-semibold text-left">
+              {card.title}
+            </h3>
+            <p className="text-gray-300 text-sm text-left">
+              {card.text}
+            </p>
+          </div>
         </div>
-      </div>
-        ))}
-      </div>
-    </div>
+      </FadeInView>
+    ))}
+  </div>
+</div>
+
   );
 };
 
